@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
+import Reviews from "./pages/Reviews";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -40,6 +41,7 @@ function App() {
                 )
               }
             />
+            <Route path="/reviews" element={<Reviews />} />
           </Routes>
         </div>
       </BrowserRouter>
