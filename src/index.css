@@ -1,7 +1,7 @@
-/* google font */
+/* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
-/* layout */
+/* Layout */
 :root {
   --primary: #1aac83;
   --error: #e7195a;
@@ -26,13 +26,13 @@ header a {
   color: #333;
   text-decoration: none;
 }
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
 }
 
-/* homepage */
+/* Homepage */
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -67,36 +67,7 @@ header a {
   color: #333;
 }
 
-.myservice-details {
-  background: #fff;
-  border-radius: 4px;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-}
-.myservice-details h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
-  color: var(--primary);
-}
-.myservice-details p {
-  margin: 0;
-  font-size: 0.9em;
-  color: #555;
-}
-.myservice-details span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
-  color: #333;
-}
-
-/* new workout form */
+/* New workout form */
 label, input {
   display: block;
 }
@@ -111,12 +82,16 @@ input {
 }
 form button {
   background: var(--primary);
-  border: 0;
   color: #fff;
-  padding: 10px;
+  padding: 8px 12px; /* Adjust padding */
   font-family: "Poppins";
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 0.9em; /* Adjust font size */
+}
+form button:hover {
+  transform: scale(0.95); /* Apply a slight scale effect on hover */
 }
 div.error {
   padding: 10px;
@@ -130,7 +105,7 @@ input.error {
   border: 1px solid var(--error);
 }
 
-/* navbar */
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
@@ -146,14 +121,33 @@ nav button {
   border-radius: 4px;
   font-family: "Poppins";
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.9em; /* Adjust font size */
 }
 
-/* auth forms */
+/* Auth forms */
 form.signup, form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+}
+
+/* Button styles */
+button.fetch-reviews {
+  background: var(--primary);
+  color: #fff;
+  padding: 1px 1px; /* Adjust padding */
+  font-family: "Poppins";
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em; /* Adjust font size */
+  max-width: 200px;
+  max-height: 100px;
+}
+
+/* Adjust button size on hover */
+button.fetch-reviews:hover {
+  transform: scale(0.95); /* Apply a slight scale effect on hover */
 }
