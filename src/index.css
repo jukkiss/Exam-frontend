@@ -37,6 +37,8 @@ header a {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 .myservice-details {
   background: #fff;

@@ -13,13 +13,33 @@ function App() {
   const toggleTheme = () => setIsDark(!isDark);  // Toggle function
 
   return (
-    <div className="App" style={{ backgroundColor: isDark ? '#00008B' : '#87CEEB', minHeight: '100vh', color: isDark ? 'white' : 'black' }}>
+    <div
+      className="App"
+      style={{
+        backgroundColor: isDark ? "lightgrey" : "#333",
+        minHeight: "100vh",
+        color: isDark ? "black" : "#1aac83",
+      }}
+    >
       <BrowserRouter>
-        <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} toggleTheme={toggleTheme} />
+        <Navbar
+          isAuthenticated={isAuthenticated}
+          setIsAuthenticated={setIsAuthenticated}
+          toggleTheme={toggleTheme}
+        />
         <Routes>
-          <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
-          <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-          <Route path="/signup" element={<Signup setIsAuthenticated={setIsAuthenticated} />} />
+          <Route
+            path="/"
+            element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/login"
+            element={<Login setIsAuthenticated={setIsAuthenticated} />}
+          />
+          <Route
+            path="/signup"
+            element={<Signup setIsAuthenticated={setIsAuthenticated} />}
+          />
           <Route path="/reviews" element={<ReviewsList />} />
         </Routes>
       </BrowserRouter>
