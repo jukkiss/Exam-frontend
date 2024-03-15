@@ -33,11 +33,11 @@ const ReviewDetails = ({ review }) => {
       method: "DELETE",
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
-    navigate("/login"); // Assuming you want to navigate to the homepage after deleting a review
+    navigate(0); // Assuming you want to navigate to the homepage after deleting a review
   };
 
   return (
-    <div className="review-details">
+    <div className="myservice-details">
       {isEditing ? (
         <form onSubmit={handleSubmit}>
           <label>Reviewer:</label>
@@ -68,19 +68,19 @@ const ReviewDetails = ({ review }) => {
           <p>Rating: {review.rating}</p>
           <p>Comment: {review.comment}</p>
           <span
-            className="material-symbols-outlined"
-            style={{ cursor: 'pointer' }}
-            onClick={handleClickDelete}
-          >
-            delete
-          </span>
-          <span
-            className="material-symbols-outlined"
-            style={{ cursor: 'pointer' }}
-            onClick={() => setIsEditing(true)}
-          >
-            edit
-          </span>
+    className="material-symbols-outlined"
+    style={{ cursor: "pointer", marginRight: "70px" }}
+    onClick={handleClickDelete}
+  >
+    delete
+  </span>
+  <span
+    className="material-symbols-outlined"
+    style={{ cursor: "pointer" }}
+    onClick={() => setIsEditing(true)}
+  >
+    edit
+  </span>
         </>
       )}
     </div>

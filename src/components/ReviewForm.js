@@ -37,7 +37,7 @@ const ReviewForm = () => {
       setRating("");
       setComment("");
       setError(null);
-      navigate("/login"); // Assuming you want to redirect to the homepage or a specific page after submission
+      navigate(0); // Assuming you want to redirect to the homepage or a specific page after submission
     }
   };
   return (
