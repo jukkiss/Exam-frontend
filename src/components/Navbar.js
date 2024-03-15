@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Add this import
 
-const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
+const Navbar = ({ isAuthenticated, setIsAuthenticated, toggleTheme }) => {
 
   const handleClick = (e) => {
     setIsAuthenticated(false);
@@ -38,6 +38,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
               <Link to="/signup">Signup</Link>
             </div>
           )}
+           <button onClick={toggleTheme}>Toggle Theme</button> {/* Theme toggle button */}
         </nav>
       </div>
     </header>
