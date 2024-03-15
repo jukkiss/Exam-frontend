@@ -8,7 +8,7 @@ const ReviewDetails = ({ review }) => {
       method: "DELETE",
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     });
-    navigate("/"); // Assuming you want to navigate to the homepage after deleting a review
+    navigate("/login"); // Assuming you want to navigate to the homepage after deleting a review
   };
 
   return (
